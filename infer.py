@@ -61,7 +61,7 @@ def main(args):
         classes=3
     )
     model.to(device)
-    checkpoint_path = os.path.join(os.path.dirname(__file__), 'model.pth')  # Update with your checkpoint path
+    checkpoint_path = os.path.join(os.path.dirname(__file__), 'segmentation_efficient_net.pth')  # Update with your checkpoint path
     checkpoint = torch.load(checkpoint_path,map_location=torch.device('cpu'))
     model.load_state_dict(checkpoint['model'])
 
